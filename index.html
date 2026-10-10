@@ -125,7 +125,6 @@
     .matchstick-item:active { cursor: grabbing; }
     .matchstick-item img { width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
 
-    /* ปรับขยับหัวใจลงมาข้างล่างไม่ให้บังข้อความ */
     .bouncing-heart-trigger {
       position: absolute;
       bottom: 25px;
@@ -834,13 +833,13 @@
       }, 120);
     }
 
-    /* ข้อมูลรูปภาพ photo1-photo5 ปรับสัดส่วนซ้าย-ขวาให้กระจายตัวสมดุลกลางหน้าจอ */
+    /* ปรับตำแหน่งข้อมูลโพลารอยด์ทั้ง 5 ใบ ให้กระจายตัวสมดุลตรงกลางหน้าจอ */
     const polaroidData = [
-      { img: 'photo1.jpg', text: 'รักเฟรมมากๆนะ<br>อยากดูแลเฟรมให้ดี<br>เราชัดเจนกับเฟรมมากๆนะ', top: '8%', left: '8%', rotate: '-9deg', duration: '1.8s', delay: '0s' },
-      { img: 'photo2.jpg', text: 'รักเฟรมมากๆนะ<br>อยากดูแลเฟรมให้ดี<br>เราชัดเจนกับเฟรมมากๆนะ', top: '10%', left: '52%', rotate: '8deg', duration: '2.4s', delay: '0.4s' },
-      { img: 'photo3.png', text: 'รักเฟรมมากๆนะ<br>อยากดูแลเฟรมให้ดี<br>เราชัดเจนกับเฟรมมากๆนะ', top: '37%', left: '30%', rotate: '-3deg', duration: '1.6s', delay: '0.2s' },
-      { img: 'photo4.jpg', text: 'รักเฟรมมากๆนะ<br>อยากดูแลเฟรมให้ดี<br>เราชัดเจนกับเฟรมมากๆนะ', top: '60%', left: '10%', rotate: '7deg', duration: '2.2s', delay: '0.6s' },
-      { img: 'photo5.jpg', text: 'รักเฟรมมากๆนะ<br>อยากดูแลเฟรมให้ดี<br>เราชัดเจนกับเฟรมมากๆนะ', top: '62%', left: '50%', rotate: '-6deg', duration: '2.0s', delay: '0.3s' }
+      { img: 'photo1.jpg', text: 'รักเฟรมมากๆนะ<br>อยากดูแลเฟรมให้ดี<br>เราชัดเจนกับเฟรมมากๆนะ', top: '12%', left: '10%', rotate: '-8deg', duration: '1.8s', delay: '0s' },
+      { img: 'photo2.jpg', text: 'รักเฟรมมากๆนะ<br>อยากดูแลเฟรมให้ดี<br>เราชัดเจนกับเฟรมมากๆนะ', top: '15%', left: '55%', rotate: '7deg', duration: '2.4s', delay: '0.4s' },
+      { img: 'photo3.png', text: 'รักเฟรมมากๆนะ<br>อยากดูแลเฟรมให้ดี<br>เราชัดเจนกับเฟรมมากๆนะ', top: '38%', left: '32%', rotate: '-3deg', duration: '1.6s', delay: '0.2s' },
+      { img: 'photo4.jpg', text: 'รักเฟรมมากๆนะ<br>อยากดูแลเฟรมให้ดี<br>เราชัดเจนกับเฟรมมากๆนะ', top: '58%', left: '12%', rotate: '6deg', duration: '2.2s', delay: '0.6s' },
+      { img: 'photo5.jpg', text: 'รักเฟรมมากๆนะ<br>อยากดูแลเฟรมให้ดี<br>เราชัดเจนกับเฟรมมากๆนะ', top: '60%', left: '53%', rotate: '-7deg', duration: '2.0s', delay: '0.3s' }
     ];
 
     function showPolaroidsSimultaneously() {
@@ -861,7 +860,7 @@
 
         card.innerHTML = `
           <div class="close-card-btn">✕</div>
-          <img src="${item.img}" alt="photo">
+          <img src="${item.img}" alt="photo" onerror="this.onerror=null; this.src='photo5.png';">
           <div class="caption">${item.text}</div>
         `;
 
