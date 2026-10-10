@@ -205,13 +205,14 @@
       50% { opacity: 1; }
     }
 
+    /* เปลี่ยนมาใช้ พื้นหลัง.png ตรงนี้ */
     .polaroid-overlay {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url('พื้นหลัง.jpg');
+      background-image: url('พื้นหลัง.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -833,7 +834,6 @@
       }, 120);
     }
 
-    /* ปรับตำแหน่งข้อมูลโพลารอยด์ทั้ง 5 ใบ ให้กระจายตัวสมดุลตรงกลางหน้าจอ */
     const polaroidData = [
       { img: 'photo1.jpg', text: 'รักเฟรมมากๆนะ<br>อยากดูแลเฟรมให้ดี<br>เราชัดเจนกับเฟรมมากๆนะ', top: '12%', left: '10%', rotate: '-8deg', duration: '1.8s', delay: '0s' },
       { img: 'photo2.jpg', text: 'รักเฟรมมากๆนะ<br>อยากดูแลเฟรมให้ดี<br>เราชัดเจนกับเฟรมมากๆนะ', top: '15%', left: '55%', rotate: '7deg', duration: '2.4s', delay: '0.4s' },
